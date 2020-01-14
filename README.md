@@ -1,1 +1,1 @@
-"# glua-wiki-scraper" 
+# glua-wiki-scraper

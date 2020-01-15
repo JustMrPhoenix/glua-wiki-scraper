@@ -110,3 +110,4 @@ dist
 # Script output files
 hooks.json
 functions.json
+enums.json

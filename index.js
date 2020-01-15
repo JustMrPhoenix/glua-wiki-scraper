@@ -45,7 +45,7 @@ function parseFuncPage(url, callback) {
         if (categories.indexOf("class_functions") != -1){
             data.classFunction = true;
             data.fullname = scope+":"+name;
-        } else if(categories.indexOf("category:hooks")) {
+        } else if(categories.indexOf("category:hooks") != -1) {
             data.isHook = true
             data.fullname = scope+":"+name;
         } else {

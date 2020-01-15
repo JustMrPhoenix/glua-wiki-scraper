@@ -195,7 +195,7 @@ function parseAndWrite(url, filename, pageParser, callback) {
 
 let queue = [
     ["https://wiki.garrysmod.com/page/Category:Enumerations", "enums.json" , parseEnumPage, ((err,entires) => {if(!err){console.log("Done parsing enums!");}})],
-    ["https://wiki.garrysmod.com/page/Category:Functions", "funcstions.json" ,parseFuncPage, (err,entires) => {if(!err){console.log("Done parsing functions!");}}],
+    ["https://wiki.garrysmod.com/page/Category:Functions", "functions.json" ,parseFuncPage, (err,entires) => {if(!err){console.log("Done parsing functions!");}}],
     ["https://wiki.garrysmod.com/page/Category:Hooks", "hooks.json" ,parseFuncPage, (err,entires) => {if(!err){console.log("Done parsing hook!");}}],
 ]
 

@@ -5,6 +5,7 @@ const request = require('request').defaults({
     }
 });
 const fs = require("fs");
+const path = require("path")
 
 const RATE_LIMIT = 20;   // Amout of simultaneously running requests
 const ERROR_TIMEOUT = 8; // Cooldown period if got error during request
@@ -185,6 +186,7 @@ function parseAndWrite(url, filename, pageParser, callback) {
             callback(`Cant parse ${url}: ${err}`);
             return;
         }
+        filename = path.resolve(__dirname, filename);
         let jsonData = JSON.stringify(entires)
         let file = fs.openSync(filename, 'w');
         fs.writeSync(file, jsonData);

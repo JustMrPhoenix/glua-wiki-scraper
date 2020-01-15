@@ -26,7 +26,7 @@ function parseFuncPage(url, callback) {
             scope: scope,
             states: [],
             description: "",
-            argsuments: [],
+            arguments: [],
             returns: [],
             examples: []
         }
@@ -83,7 +83,7 @@ function parseFuncPage(url, callback) {
                 argData.name = split[0];
                 argData.defaultValue = split[1];
             }
-            data.argsuments.push(argData);
+            data.arguments.push(argData);
         })
         $(".return").each((index, elem) => {
             let type = $("p > span > a", elem).text();

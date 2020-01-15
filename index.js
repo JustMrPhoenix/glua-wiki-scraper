@@ -49,7 +49,7 @@ function parseFuncPage(url, callback) {
             data.isHook = true
             data.fullname = scope+":"+name;
         } else {
-            data.fullname = scope == "global" ? name : scope+"."+name;
+            data.fullname = scope.toLowerCase() == "global" ? name : scope+"."+name;
         }
         // Hate this part, wiki html is such a mess
         let afeterDesc = $("#Description").parent().nextAll()
